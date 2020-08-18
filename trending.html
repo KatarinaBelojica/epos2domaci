@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Homepage CSS -->
+    <link rel="stylesheet" type="text/css" href="css/home-style.css">
+    <link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet'>
+    <!--Datum -->
+	   <script type="text/javascript" src="js/date.js"></script>
+    <title>PàP</title>
+  </head>
+
+  <body>
+    <!-- Jumbotron-->
+    <div class="jumbotron text-center" style="margin-bottom:0">
+      <div class="container">
+        <p id="pCover">Modni trendovi na jednom mestu.</p>
+        <h1>Prêt-à-Porter</h1>
+      </div>
+    </div>
+
+    <!-- Navigacija - Glavni meni-->
+    <nav class="navbar navbar-expand-sm bg-light navbar-light justify-content-center sticky-top">
+      <a class="navbar-brand  mr-auto" href="home.html">Prêt-à-Porter</a>
+
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link" href="home.html">Početna</a>
+        </li>
+        <!-- <li class="nav-item active">
+          <a class="nav-link" href="trending.html">Trendovi</a>
+        </li> -->
+        <!-- Dropdown -->
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Trendovi
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="trending.html">Proleće 2019 Ready-to-Wear</a>
+            <a class="dropdown-item" href="https://www.vogue.com/fashion-shows/fall-2018-couture" target="_blank">Jesen 2018 Couture</a>
+          </div>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="lightboxgallery-master\demo\gallery.html">Galerija</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="mailing.html">Mailing lista</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li id='clock' class="clock nav-item mr-sm-2">
+          <a class="nav-link " href="#">
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!--Title-->
+    <div id="landingTitle" class="container text-center">
+      <p id="pLandingTitle">Proleće 2019 Ready-to-Wear</p>
+      <p id="pFollowing">Četvrtak, 20. septembar 2018.</p>
+    </div>
+    
+    <!--Video-->
+    <div class="column">
+      <div id="" class=" videoP row m-5 p-5 mx-auto" style="width:1206px; height:750px">
+        <p id="pVideoTitle">Winnie Harlow Hangs With Hailey Baldwin and Dons Diamonds - London Fashion Week</p>
+        <script async src="//player-backend.cnevids.com/script/video/5ba27a7d62571018a6000013.js"></script>
+      </div>
+      
+      <div id="trending" class="videoP row m-5 p-5 mx-auto" style="width:1206px; height:750px">
+        <p id="pVideoTitle">Vogue’s Anna Wintour and Hamish Bowles Chat About the Best Moments of London Fashion Week</p>
+        <script async src="//player-backend.cnevids.com/script/video/5ba1611f6257102e26000008.js?iu=/3379/vogue.dart/share"></script>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script type="text/javascript">
+    function showTime(){
+          var date = new Date();
+          var h = date.getHours(); // 0 - 23
+          var m = date.getMinutes(); // 0 - 59
+          var s = date.getSeconds(); // 0 - 59
+          var session = "AM";
+
+          if(h == 0){
+              h = 12;
+          }
+          if(h > 12){
+              h = h - 12;
+              session = "PM";
+          }
+          h = (h < 10) ? "0" + h : h;
+          m = (m < 10) ? "0" + m : m;
+          s = (s < 10) ? "0" + s : s;
+          var time = h + ":" + m + ":" + s + " " + session;
+
+          document.getElementById("clock").textContent = time;
+
+          setTimeout(showTime, 1000);
+        }
+        showTime();
+		</script>
+    <script>
+    document.getElementById("pFollowing").innerHTML = showDate();
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
